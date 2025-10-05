@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<title>Delete {{ manufacturer.name }}</title>
+{% endblock %}
+
+
+{% block content %}
+	<h1>Delete manufacturer - {{ manufacturer.name }}</h1>
+  <p>Are you sure to delete manufacturer - {{ manufacturer.name }}</p>
+  <p><i>Cars in this manufacturer will be deleted too</i></p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Yes, I am sure" class="btn btn-danger">
+  </form>
+{% endblock %}
